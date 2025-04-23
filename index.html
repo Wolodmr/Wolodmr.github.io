@@ -3,127 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vladimir Shkurko – Django Developer</title>
+  <title>Vladimir Shkurko | Django Developer Portfolio</title>
   <style>
-    :root {
-      --bg-light: #ffffff;
-      --bg-dark: #121212;
-      --text-light: #1e1e1e;
-      --text-dark: #eaeaea;
-      --accent: #007acc;
-    }
-
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 2rem;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: all 0.3s ease;
+      background: #f4f6f9;
+      color: #333;
     }
 
     header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      margin-bottom: 2rem;
     }
 
-    h1 {
-      font-size: 2rem;
+    header h1 {
       margin: 0;
+      font-size: 2.5rem;
     }
 
-    .tagline {
-      font-style: italic;
-      color: var(--accent);
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background-color: #f9f9f9;
+      margin-bottom: 2.5rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
 
     h2 {
-      color: var(--accent);
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
 
     a {
-      color: var(--accent);
+      color: #3498db;
+      text-decoration: none;
     }
 
-    .toggle-btn {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 4px;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    .dark-mode section {
-      background-color: #1e1e1e;
-      border-color: #333;
-    }
-
-    .dark-mode a {
-      color: #4dbfff;
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
   <header>
     <h1>Vladimir Shkurko</h1>
-    <div class="tagline">Building Efficient Web Applications with Django</div>
+    <p>Django Developer • Building Efficient Web Applications</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an entry-level <strong>Django developer</strong> with a strong dedication to meeting client needs. My core skills include <strong>Python, Django</strong>, and basic <strong>HTML/JavaScript</strong>. I specialize in backend development and take pride in executing customer expectations thoroughly and to high modern standards.
-    </p>
-    <p><strong>Strength:</strong> Willing to work hard to meet expectations. <br />
-    <strong>Hourly Rate:</strong> $5 (negotiable) – Pricing depends on project scope.</p>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am an entry-level Django backend developer with strong motivation and dedication to
+        delivering what the client expects. I focus on building clean, efficient, and reliable web applications.
+      </p>
+      <p>
+        🛠️ Core skills: Python, Django, HTML, JavaScript<br />
+        🎓 Courses: IBM Python for Data Science (Coursera),
+        Tuomas Kivioja's Python Bootcamp<br />
+        📜 Former Candidate of Economics, Bauman MHTS graduate (Mechanical Engineering)
+      </p>
+    </section>
 
-  <section>
-    <h2>Featured Project: Vote Cast</h2>
-    <p><strong>Live App:</strong> <a href="https://vote-cast.up.railway.app/" target="_blank">https://vote-cast.up.railway.app/</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Wolodmr/vote_cast" target="_blank">Vote Cast Repository</a></p>
-    <p><strong>MkDocs Documentation:</strong> <a href="https://wolodmr.github.io/vote_cast" target="_blank">HTML Version</a></p>
-    <p><strong>PDF Documentation:</strong> <a href="https://github.com/Wolodmr/vote_cast/tree/main/output" target="_blank">PDF Files</a></p>
+    <section>
+      <h2>Featured Project: Vote Cast</h2>
+      <p>
+        A Django-based online voting system with authentication, one-time voting during a
+        specific period, email notifications, and analytics features.
+      </p>
+      <ul>
+        <li>Users can vote only once and only during the session period</li>
+        <li>Email notifications inform users about new voting sessions</li>
+        <li>Admin panel for managing sessions and viewing results</li>
+        <li>Stylish analytics dashboard coming soon!</li>
+      </ul>
+      <p>
+        🔗 <a href="https://vote-cast.up.railway.app" target="_blank">Live App</a> <br />
+        📄 <a href="https://wolodmr.github.io/vote_cast" target="_blank">HTML Documentation</a> <br />
+        📘 <a href="https://github.com/Wolodmr/vote_cast/tree/main/output" target="_blank">PDF Documentation</a> <br />
+        💻 <a href="https://github.com/Wolodmr/vote_cast" target="_blank">Source Code</a>
+      </p>
+    </section>
 
-    <h3>Key Features:</h3>
-    <ul>
-      <li>User authentication and session management</li>
-      <li>Voting allowed only once per user and only during active session</li>
-      <li>Email notifications for new voting sessions</li>
-      <li>Result analytics with visualization</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>
+        💼 <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank">LinkedIn</a><br />
+        🐙 <a href="https://github.com/Wolodmr" target="_blank">GitHub</a><br />
+        ✉️ <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a>
+      </p>
+      <p>
+        💰 Hourly rate: $5/hour<br/>
+        🧾 Pricing depends on project scope — contact me for a quote.
+      </p>
+    </section>
+  </main>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Wolodmr" target="_blank">github.com/Wolodmr</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank">linkedin.com/in/vladimir-shkurko</a></p>
-  </section>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+  <footer>
+    &copy; 2025 Vladimir Shkurko • Django Developer
+  </footer>
 </body>
 </html>
