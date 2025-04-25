@@ -1,0 +1,4 @@
+plugins:
+  - search
+  - pdf-export:
+      verbose: false
