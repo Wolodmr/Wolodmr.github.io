@@ -1,7 +1,0 @@
-plugins:
-  - search
-  - pdf-export:
-      verbose: false
-nav:
-  - Home: index.md
-  - Résumé: resume.md
