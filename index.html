@@ -17,7 +17,6 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
-      position: relative;
     }
 
     header h1 {
@@ -39,6 +38,8 @@
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .resume-button:hover {
@@ -85,58 +86,14 @@
       font-size: 0.9rem;
       color: #888;
     }
-
-    /* Resume hidden section */
-    #resume {
-      display: none;
-      margin-top: 2rem;
-    }
-
-    #resume h1 {
-      font-size: 2rem;
-      color: #0d47a1;
-      margin-bottom: 0.2rem;
-    }
-
-    #resume p.title {
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-
-    #resume h2 {
-      font-size: 1.3rem;
-      color: #1565c0;
-      margin-top: 1.5rem;
-    }
-
-    #resume ul {
-      margin-top: 0.5rem;
-      padding-left: 1.5rem;
-    }
-
-    #resume hr {
-      border: none;
-      border-top: 1px solid #bbdefb;
-      margin: 2rem 0;
-    }
   </style>
-
-  <script>
-    function toggleResume() {
-      const resume = document.getElementById('resume');
-      resume.style.display = (resume.style.display === 'none' || resume.style.display === '') ? 'block' : 'none';
-      window.scrollTo(0, document.body.scrollHeight); // Scroll down to the resume
-    }
-  </script>
 </head>
 
 <body>
   <header>
     <h1>Vladimir Shkurko</h1>
     <p>Django Developer • Building Efficient Web Applications</p>
-    <button class="resume-button" onclick="toggleResume()">📄 Resume</button>
+    <a class="resume-button" href="https://your-link-to-resume.html" target="_blank">📄 View Résumé</a>
   </header>
 
   <main>
@@ -185,39 +142,6 @@
         💰 Hourly rate: $5/hour<br/>
         🧾 Pricing depends on project scope — contact me for a quote.
       </p>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-      <h1>Vladimir Shkurko</h1>
-      <p class="title">Django Developer</p>
-      <p>📍 Based in Belgrade, Serbia | 🌐 <a href="https://wolodmr.github.io" target="_blank">wolodmr.github.io</a></p>
-      <p>📧 postvezha@gmail.com | <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank">LinkedIn</a> | <a href="https://github.com/Wolodmr" target="_blank">GitHub</a></p>
-      <hr>
-      <h2>🧠 Summary</h2>
-      <p>Django developer with strong Python skills focused on backend web development. Creator of the full-featured online voting system "Vote Cast" with authentication, restricted voting, real-time results, and complete documentation. Open to freelance opportunities.</p>
-      <h2>🛠️ Skills</h2>
-      <ul>
-        <li>Languages: Python, HTML, JavaScript</li>
-        <li>Frameworks: Django</li>
-        <li>Tools: Git, GitHub, SQLite, MkDocs</li>
-        <li>Familiar with: Docker, Redis, Celery</li>
-      </ul>
-      <h2>💼 Projects</h2>
-      <p><strong>Vote Cast – Online Voting System</strong></p>
-      <ul>
-        <li>Created Django web app allowing secure one-time votes within scheduled sessions.</li>
-        <li>Real-time vote counting and results visualization.</li>
-        <li>Full documentation site (MkDocs) + downloadable PDF version.</li>
-        <li>Live on Railway hosting.</li>
-      </ul>
-      <h2>🎓 Education & Certifications</h2>
-      <ul>
-        <li>Python for Data Science, AI, and Development – IBM / Coursera</li>
-        <li>Python Developer Bootcamp – by Tuomas Kivioja</li>
-        <li>Mechanical Engineer – Bauman MHTS (1983)</li>
-        <li>Candidate of Economics (1999)</li>
-      </ul>
     </section>
   </main>
 
