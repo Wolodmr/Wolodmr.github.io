@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Résumé | Vladimir Shkurko</title>
+  <meta name="description" content="Resume of Vladimir Shkurko, Django Developer.">
+  <title>Vladimir Shkurko | Résumé</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -25,8 +26,25 @@
     }
 
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+    }
+
+    .resume-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .resume-button:hover {
+      background-color: #2980b9;
     }
 
     main {
@@ -69,62 +87,84 @@
       font-size: 0.9rem;
       color: #888;
     }
+
+    .back-link {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .back-link a {
+      font-weight: bold;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    .back-link a:hover {
+      background-color: #d0d7de;
+    }
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>Vladimir Shkurko</h1>
-    <p>Junior Django Backend Developer — Résumé</p>
+    <p>Django Developer</p>
+    <p>📍 Based in Belgrade, Serbia | 🌐 <a href="https://wolodmr.github.io/" target="_blank" style="color:white;">wolodmr.github.io</a></p>
+    <p>📧 <a href="mailto:postvezha@gmail.com" style="color:white;">postvezha@gmail.com</a> | <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank" style="color:white;">LinkedIn</a> | <a href="https://github.com/Wolodmr" target="_blank" style="color:white;">GitHub</a></p>
+    <a class="resume-button" href="https://wolodmr.github.io" target="_blank">⬅️ Back to Portfolio</a>
   </header>
 
   <main>
+
     <section>
-      <h2>Summary</h2>
+      <h2>🧠 Summary</h2>
       <p>
-        Highly motivated junior Django developer with a background in engineering and economics. Focused on clean, secure web applications and reliable client delivery.
+        Django developer with strong Python skills focused on backend web development.
+        Creator of the full-featured online voting system "Vote Cast" with authentication, restricted voting,
+        real-time results, and complete documentation. Open to freelance opportunities.
       </p>
     </section>
 
     <section>
-      <h2>Skills</h2>
+      <h2>🛠️ Skills</h2>
       <ul>
-        <li>Python, Django, Django REST Framework</li>
+        <li>Django, Django REST Framework</li>
         <li>PostgreSQL, SQLite, MySQL</li>
-        <li>HTML, JavaScript (basics)</li>
-        <li>Celery, Redis, Deployment on Render & Railway</li>
+        <li>Celery, Redis</li>
       </ul>
     </section>
 
     <section>
-      <h2>Experience</h2>
-      <p><strong>Vote Cast Project</strong> – Online Voting Platform</p>
+      <h2>💼 Projects</h2>
+      <p><strong>Vote Cast – Online Voting System</strong></p>
       <ul>
-        <li>Built a Django app for secure session-based voting</li>
-        <li>Integrated email notifications using SendGrid</li>
-        <li>Generated PDF and HTML documentation</li>
-        <li>Deployed using Render with proper static file handling</li>
+        <li>Created Django web app allowing secure one-time votes within scheduled sessions.</li>
+        <li>Real-time vote counting and results visualization.</li>
+        <li>Full documentation site (MkDocs) + downloadable PDF version.</li>
+        <li>Live on Render hosting:
+          <a href="https://vote-cast.onrender.com/" target="_blank">Vote Cast</a>
+        </li>
       </ul>
     </section>
 
     <section>
-      <h2>Education</h2>
-      <p>Cand. Sc. (Economics), Bauman MSTU (Mechanical Engineering)</p>
-      <p>Python for Data Science – IBM / Coursera</p>
-      <p>Python Developer Bootcamp – Tuomas Kivioja</p>
+      <h2>🎓 Education & Certifications</h2>
+      <ul>
+        <li>Python for Data Science, AI, and Development – IBM / Coursera</li>
+        <li>Python Developer Bootcamp – by Tuomas Kivioja</li>
+        <li>Mechanical Engineer – Bauman MSTU (Moscow, 1983)</li>
+        <li>Candidate of Economics – Bauman MSTU and State University of Management (Moscow, 1999)</li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>📧 <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a><br/>
-         🐙 <a href="https://github.com/Wolodmr" target="_blank">GitHub</a><br/>
-         💼 <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank">LinkedIn</a>
-      </p>
-    </section>
   </main>
 
   <footer>
     &copy; 2025 Vladimir Shkurko • Django Developer
   </footer>
+
 </body>
 </html>
