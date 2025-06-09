@@ -6,58 +6,85 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0 40px 10px 40px; /* Reduced top margin */
-      line-height: 1.6;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
       color: #333;
     }
-    .header {
+
+    header {
+      background-color: #22566e;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      margin-bottom: 10px; /* Reduced gap between title block and content */
     }
-    h1 {
-      font-size: 50px; /* Keeping the large name size */
-      margin-bottom: 4px; /* TINY space between Name and Title */
-      color: #0d47a1;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 2px rgba(13,71,161,0.2);
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    p.title {
-      font-size: 44px; /* Keeping the large title size */
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 15px; /* Reduced gap after title */
-      color: #333;
-      letter-spacing: 0.5px;
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
+
+    .resume-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .resume-button:hover {
+      background-color: #2980b9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
     h2 {
-      font-size: 22px;
-      margin-top: 5px; /* Reduced top margin */
-      margin-bottom: 5px;
-      color: #1565c0;
-      border-bottom: 2px solid #bbdefb;
-      padding-bottom: 4px;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
     a {
-      color: #0d47a1;
+      color: #3498db;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    ul {
-      margin-top: 5px;
-      padding-left: 20px;
-    }
-    hr {
-      border: 0;
-      height: 1px;
-      background: #bbdefb;
-      margin: 15px 0; /* Reduced gap around horizontal rule */
-    }
-    .section {
-      margin-bottom: 15px; /* Reduced bottom margin */
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
