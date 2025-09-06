@@ -1,157 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Vladimir Shkurko, Django Backend Developer. Featuring the ioVote project and résumé.">
-  <title>Vladimir Shkurko | Django Junior Backend Developer Portfolio</title>
+  <meta charset="utf-8" />
+  <title>Vladimir Shkurko — Data/Business Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Data/Business Analyst — Python, SQL, PostgreSQL, pandas, dashboards, reporting." />
   <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --accent: #2563eb; /* blue-600 */
+      --chip: #eef2ff; /* indigo-50 */
+      --border: #e5e7eb; /* gray-200 */
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f4f6f9;
-      color: #333;
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans";
+      color: var(--ink); background: var(--bg);
     }
-
-    header {
-      background-color: #22566e;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 20px 80px; }
+    header { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 14px; }
+    h1 { margin: 0; font-size: 28px; }
+    .tagline { color: var(--muted); margin: 0; }
+    .contacts { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip { background: var(--chip); border: 1px solid var(--border); padding: 4px 8px; border-radius: 999px; font-size: 13px; }
+    section { padding: 22px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: 0; }
+    h2 { margin: 0 0 14px; font-size: 20px; }
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .card {
+      border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: #fff;
+      transition: box-shadow .2s ease;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .card:hover { box-shadow: 0 6px 22px rgba(2,6,23,0.08); }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .muted { color: var(--muted); }
+    ul { margin: 8px 0 0 20px; }
+    footer { margin-top: 40px; font-size: 14px; color: var(--muted); }
+    .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .btn {
+      display: inline-block; border: 1px solid var(--accent); color: #fff; background: var(--accent);
+      padding: 8px 12px; border-radius: 10px; font-weight: 600;
     }
-
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    .resume-button {
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .resume-button:hover {
-      background-color: #2980b9;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
-
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
+    .btn.secondary { background: transparent; color: var(--accent); }
+    .small { font-size: 14px; }
+    .note { background: #f8fafc; border: 1px dashed var(--border); padding: 10px 12px; border-radius: 10px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 14px; }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Vladimir Shkurko</h1>
-    <p>Django Backend Developer | API Integration | Efficient & Secure Web Applications</p>
-    <p>📍 Belgrade, Serbia • <a href="https://wolodmr.github.io/" style="color:white;">wolodmr.github.io</a></p>
-    <p>📧 <a href="mailto:postvezha@gmail.com.com" style="color:white;">postvezha@gmail.com.com</a> • 
-      <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" style="color:white;">LinkedIn</a> • 
-      <a href="https://github.com/Wolodmr" style="color:white;">GitHub</a></p>
-    <a class="resume-button" href="https://wolodmr.github.io/vladimir_shkurko_resume.pdf" target="_blank">📄 View Resume</a>
-  </header>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Vladimir Shkurko</h1>
+        <p class="tagline">Data/Business Analyst — Python • SQL • PostgreSQL • pandas • Dashboards</p>
+        <div class="chips">
+          <span class="chip">Python (pandas, NumPy, matplotlib)</span>
+          <span class="chip">SQL (CTEs, window functions)</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Excel & reporting</span>
+          <span class="chip">APIs & automation</span>
+        </div>
+      </div>
+      <div class="contacts">
+        <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a>
+        <span>•</span>
+        <a href="https://github.com/wolodmr">github.com/wolodmr</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+        <span>•</span>
+        <a href="/resume.html">Resume</a>
+      </div>
+    </header>
 
-  <main>
     <section>
-      <h2>About Me</h2>
-      <p>
-        I am a junior backend developer (Django) with strong motivation and dedication to
-        delivering what the client expects. I focus on building clean, efficient, and reliable web applications.
+      <h2>About</h2>
+      <p class="small">
+        I build compact data tools that turn raw data into clear decisions. Recent work includes PostgreSQL-backed dashboards for a voting-analytics app and a small job-market monitor that filters noise and surfaces relevant roles automatically.
       </p>
-      <p>
-        🛠️ Core skills: Django, Django REST Framework, PostgreSQL, SQLite, MySQL, Celery, Redis <br />
-        🎓 Courses: Python for Data Science, AI, and Development – IBM / Coursera,
-        Python Developer Bootcamp – by Tuomas Kivioja<br />
-        📜 Cand. Sc. (Economics), Bauman MSTU graduate (Mechanical Engineering)
-      </p>
+      <div class="note small">
+        <strong>Hiring?</strong> I’m applying for Data/Business/Financial Analyst roles. I enjoy finding the shortest path from data → insight → decision.
+      </div>
     </section>
 
     <section>
-      <h2>Featured Project:ioVote</h2>
-      <p>
-       ioVote is a secure Django-based voting platform designed for online elections and decision-making. Ideal for organizations, 
-        schools, or clubs that need fair, one-time voting with real-time results.
-      </p>
-      <ul>
-        <li>Users can vote only once and only during the session period</li>
-        <li>Email notifications inform users about new voting sessions</li>
-        <li>Admin panel for managing sessions and viewing results</li>
-        <li>Stylish analytics dashboard coming soon!</li>
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>ioVote Analytics Dashboards</h3>
+          <p class="muted small">PostgreSQL • Python • matplotlib</p>
+          <ul class="small">
+            <li>Designed queries for turnout, option-level results, and activity over time.</li>
+            <li>Built bar/pie/line charts; reduced manual reporting time by <strong>[~30%]</strong>.</li>
+            <li>Improved decision clarity for non-technical users with concise visuals.</li>
+          </ul>
+          <div class="btns">
+            <a class="btn secondary" href="#">Case study (soon)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Job-Market Monitor</h3>
+          <p class="muted small">Telegram + Jooble API • Python</p>
+          <ul class="small">
+            <li>Keyword filters and alerts for relevant roles; cut noise significantly.</li>
+            <li>Saved <strong>[~2 hours/week]</strong> by automating search + triage.</li>
+            <li>Achieved <strong>[20% (“% of alerts that were genuinely relevant/applicable”)]</strong> alert precision after keyword tuning.</li>
+          </ul>
+          <div class="btns">
+            <a class="btn secondary" href="#">Repo (private/clean-up)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Ops & Stability Tracking</h3>
+          <p class="muted small">Render • UptimeRobot • Python</p>
+          <ul class="small">
+            <li>Monitored uptime and lightweight metrics to surface reliability issues.</li>
+            <li>Reduced manual checks and improved release confidence.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Additional</h3>
+          <p class="small">
+            PostgreSQL coursework (DataCamp — free module completed); continuous practice with SQL window functions, CTEs, and query plans; clear, literate docs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="small">
+        <li><strong>Languages/Tools:</strong> Python (pandas, NumPy, matplotlib), SQL, PostgreSQL, Excel</li>
+        <li><strong>Data:</strong> cleansing, joins, window functions, KPIs, dashboards, simple ETL</li>
+        <li><strong>Ops:</strong> Git, GitHub, Render, UptimeRobot</li>
+        <li><strong>Soft:</strong> stakeholder comms, structured notes, concise reporting</li>
       </ul>
-      <p>
-        🔗 <a href="https://iovote.onrender.com/" target="_blank">Live App</a> <br />
-        📄 <a href="https://wolodmr.github.io/iovote" target="_blank">HTML Documentation</a> <br />
-        📘 <a href="https://github.com/Wolodmr/iovote/tree/main/docs/pdfs" target="_blank">PDF Documentation</a> <br />
-        💻 <a href="https://github.com/Wolodmr/iovote" target="_blank">Source Code</a>
-      </p>
     </section>
 
     <section>
-      <h2>Get in Touch</h2>
-      <p>
-        💼 <a href="https://www.linkedin.com/in/vladimir-shkurko-07962333a" target="_blank">LinkedIn</a><br />
-        🐙 <a href="https://github.com/Wolodmr" target="_blank">GitHub</a><br />
-        ✉️ <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a>
+      <h2>Contact</h2>
+      <p class="small">
+        Email: <a href="mailto:postvezha@gmail.com">postvezha@gmail.com</a> &nbsp;•&nbsp; GitHub: <a href="https://github.com/wolodmr">wolodmr</a> &nbsp;•&nbsp; LinkedIn: <a href="https://www.linkedin.com">profile</a>
       </p>
-      <p>
-        💰 Hourly rate: $10/hour<br/>
-        🧾 Pricing depends on project scope — contact me for a quote.
-      </p>
+      
     </section>
-  </main>
 
-  <footer>
-    &copy; 2025 Vladimir Shkurko • Django Developer
-  </footer>
+    <footer>
+      <p>© <span id="y"></span> Vladimir Shkurko</p>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
