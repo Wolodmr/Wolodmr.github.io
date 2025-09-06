@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Case: Job-Market Monitor — Vladimir Shkurko</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;background:#fff}
+  .wrap{max-width:880px;margin:0 auto;padding:28px 20px 80px}
+  a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
+  h1{margin:0 0 6px} .muted{color:#475569} header{border-bottom:1px solid #e5e7eb;padding-bottom:12px}
+  pre{background:#f8fafc;border:1px solid #e5e7eb;padding:10px 12px;border-radius:10px;overflow:auto}
+  .note{background:#f8fafc;border:1px dashed #e5e7eb;padding:10px 12px;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Job-Market Monitor</h1>
+    <p class="muted">Telegram + Jooble API · Python</p>
+  </header>
+
+  <h2>Context</h2>
+  <p>Filtering relevant analyst roles from job channels is noisy and time-consuming. I built a small monitor to triage posts automatically.</p>
+
+  <h2>Method</h2>
+  <ul>
+    <li>Sources: Telegram channel history + Jooble API.</li>
+    <li>Keyword filters (e.g., “data analyst”, “SQL”, “Belgrade”, “remote”).</li>
+    <li>Deduping, simple scoring, and alerts to a private chat.</li>
+  </ul>
+
+  <h2>Results</h2>
+  <ul>
+    <li>Saved <strong>~2 hours/week</strong> by automating search + triage.</li>
+    <li>Alert precision of <strong>~20% (“% of alerts that were genuinely relevant/applicable”)</strong> after tuning keywords.</li>
+  </ul>
+
+  <h2>Representative snippet</h2>
+  <pre><code># pseudo-code
+for post in stream():
+    text = normalize(post.text)
+    score = score_text(text, POSITIVE_KEYWORDS, NEGATIVE_KEYWORDS)
+    if score &gt;= THRESHOLD:
+        send_alert(post.link, summary(text))</code></pre>
+
+  <h2>Notes</h2>
+  <p>Repo stays private (API keys, personal channels). This page documents the approach and outcomes. If needed, I can share a sanitized gist.</p>
+
+  <p><a href="/">← Back to portfolio</a></p>
+</div>
+</body>
+</html>
