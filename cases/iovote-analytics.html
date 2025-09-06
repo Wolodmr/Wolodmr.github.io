@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Case: ioVote Analytics — Vladimir Shkurko</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;background:#fff}
+  .wrap{max-width:880px;margin:0 auto;padding:28px 20px 80px}
+  a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
+  h1{margin:0 0 6px} .muted{color:#475569} header{border-bottom:1px solid #e5e7eb;padding-bottom:12px}
+  pre{background:#f8fafc;border:1px solid #e5e7eb;padding:10px 12px;border-radius:10px;overflow:auto}
+  .note{background:#f8fafc;border:1px dashed #e5e7eb;padding:10px 12px;border-radius:10px}
+  img{max-width:100%;border:1px solid #e5e7eb;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>ioVote Analytics Dashboards</h1>
+    <p class="muted">PostgreSQL · Python · matplotlib</p>
+  </header>
+
+  <h2>Context</h2>
+  <p>ioVote produces session results (options, turnout, activity over time). Stakeholders needed fast, visual summaries without manual spreadsheet work.</p>
+
+  <h2>Data</h2>
+  <ul>
+    <li>PostgreSQL tables: <code>sessions</code>, <code>votes</code>, <code>options</code></li>
+    <li>Fields: timestamps, voter (ID/anonymous), option IDs, session IDs</li>
+  </ul>
+
+  <h2>Method</h2>
+  <ul>
+    <li>SQL views for turnout, option-level results, and time-series activity (CTEs + window functions).</li>
+    <li>Python (pandas/matplotlib) scripts to render bar, pie, and line charts.</li>
+    <li>Exported images for the app and a lightweight HTML report.</li>
+  </ul>
+
+  <h2>Results</h2>
+  <ul>
+    <li>Reduced manual reporting time by <strong>~30%</strong>.</li>
+    <li>Improved decision clarity for non-technical users (charts instead of raw tables).</li>
+  </ul>
+
+  <h2>Examples</h2>
+  <p class="note">Add 2–3 chart images here (PNG). Place them in <code>/assets/iovote/</code> and reference them:</p>
+  <p><img src="/assets/iovote/turnout_by_session.png" alt="Turnout by session"></p>
+  <p><img src="/assets/iovote/options_share.png" alt="Option share chart"></p>
+
+  <h2>Representative SQL</h2>
+  <pre><code>WITH votes_per_option AS (
+  SELECT v.session_id, v.option_id, COUNT(*) AS votes
+  FROM votes v
+  GROUP BY v.session_id, v.option_id
+)
+SELECT o.option_text, vpo.votes
+FROM votes_per_option vpo
+JOIN options o ON o.id = vpo.option_id
+WHERE vpo.session_id = :session_id
+ORDER BY vpo.votes DESC;</code></pre>
+
+  <h2>Notes</h2>
+  <p>Full app code remains private; this case shows approach, queries, and outputs.</p>
+
+  <p><a href="/">← Back to portfolio</a></p>
+</div>
+</body>
+</html>
