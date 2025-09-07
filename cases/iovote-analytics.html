@@ -13,6 +13,15 @@
   .note{background:#f8fafc;border:1px dashed #e5e7eb;padding:10px 12px;border-radius:10px}
   img{max-width:100%;border:1px solid #e5e7eb;border-radius:10px}
 </style>
+<!-- add this to the <style> block if it isn't there yet -->
+<style>
+  /* ...existing styles... */
+  .btns{display:flex;gap:10px;margin:12px 0}
+  .btn{display:inline-block;border:1px solid #2563eb;background:#2563eb;color:#fff;
+       padding:8px 12px;border-radius:10px;font-weight:600;text-decoration:none}
+  .btn:hover{text-decoration:none;filter:brightness(.95)}
+</style>
+
 </head>
 <body>
 <div class="wrap">
@@ -20,6 +29,14 @@
     <h1>ioVote Analytics Dashboards</h1>
     <p class="muted">PostgreSQL · Python · matplotlib</p>
   </header>
+  <!-- put this right below the header block -->
+  <div class="btns">
+    <a class="btn" href="https://iovote.onrender.com/voting_sessions/charts/1/"
+       target="_blank" rel="noopener">
+      Live demo (charts)
+    </a>
+  </div>
+
 
   <h2>Context</h2>
   <p>ioVote produces session results (options, turnout, activity over time). Stakeholders needed fast, visual summaries without manual spreadsheet work.</p>
