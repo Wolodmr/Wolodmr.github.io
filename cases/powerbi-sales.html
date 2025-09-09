@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8" />
+<title>Case: Power BI Sales & Profit — Vladimir Shkurko</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Power BI executive dashboard: Sales, Profit, GM%, YoY, top products and regions.">
+<style>
+  :root{--ink:#0f172a;--muted:#475569;--accent:#2563eb;--border:#e5e7eb}
+  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:#fff}
+  .wrap{max-width:880px;margin:0 auto;padding:28px 20px 80px}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding-bottom:12px}
+  .muted{color:var(--muted)} .small{font-size:14px;color:var(--muted)}
+  .note{background:#f8fafc;border:1px dashed var(--border);padding:10px 12px;border-radius:10px}
+  img{max-width:100%;border:1px solid var(--border);border-radius:10px}
+  .btns{display:flex;gap:10px;margin:12px 0;flex-wrap:wrap}
+  .btn{display:inline-block;border:1px solid var(--accent);background:var(--accent);color:#fff;
+       padding:8px 12px;border-radius:10px;font-weight:600;text-decoration:none}
+  .btn.secondary{background:transparent;color:var(--accent)}
+</style>
+</head><body><div class="wrap">
+  <header>
+    <h1>Power BI Sales & Profit Dashboard</h1>
+    <p class="muted">Power BI · DAX · Data modeling</p>
+  </header>
+
+  <p class="note small">
+    <strong>Summary:</strong> Executive dashboard with Sales, Profit, GM%, YoY; drill-downs by Segment/Product; regions map;
+    what-if/Decomposition analysis. Built from the standard “Financials” sample.
+  </p>
+
+  <!-- Embed (if Publish to web is enabled). Replace the src with your embed URL -->
+  <div style="margin:14px 0">
+    <iframe title="Power BI — Sales & Profit"
+            width="100%" height="620" loading="lazy"
+            src="YOUR_PUBLISH_TO_WEB_IFRAME_SRC"
+            frameborder="0" allowfullscreen="true"></iframe>
+    <p class="small">If the embed is blocked, see screenshots below.</p>
+  </div>
+
+  <h2>Results</h2>
+  <ul>
+    <li>One-look KPIs (Sales, GM%, YoY) for execs; top products/segments surfaced.</li>
+    <li>Drill-downs cut ad-hoc questions; standardized definitions via DAX measures.</li>
+  </ul>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li>DAX: <code>Sales</code>, <code>Profit</code>, <code>GM%</code>, <code>YoY%</code> with date intelligence.</li>
+    <li>Model: proper Date table; hidden raw columns; sort by MonthNo.</li>
+    <li>UX: bookmarks for Executive vs Ops, report page tooltips.</li>
+  </ul>
+
+  <h2>Screenshots</h2>
+  <p><img src="/assets/powerbi/overview.png" alt="Overview page with KPIs and trends" loading="lazy"></p>
+  <p><img src="/assets/powerbi/drill.png" alt="Drill-down by Segment and Product" loading="lazy"></p>
+
+  <div class="btns">
+    <a class="btn secondary" href="/vladimir_shkurko_resume.pdf">Resume (PDF)</a>
+    <a class="btn secondary" href="mailto:postvezha@gmail.com">Email</a>
+  </div>
+
+  <p><a href="/">← Back to portfolio</a></p>
+</div></body></html>
