@@ -30,7 +30,9 @@ description: Executive dashboard in Power BI with KPIs, product mix, YoY, drilld
     .btn.secondary{background:transparent;color:var(--accent)}
     .note{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:12px}
     details{margin:18px 0}
-    iframe{width:100%;height:620px;border:0;border-radius:10px}
+    /* responsive iframe wrapper (16:9) */
+    .pbi-wrap{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+    .pbi-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     ul{margin:8px 0 0 22px}
   </style>
 </head>
@@ -50,41 +52,39 @@ description: Executive dashboard in Power BI with KPIs, product mix, YoY, drilld
       and a Top-N what-if parameter. Built from the standard <em>Financials</em> sample.
     </p>
 
-    <!-- PNG showcase -->
+    <!-- Static showcase (kept for SEO + fallback) -->
     <figure>
       <a href="/assets/powerbi/sales-profit.png" target="_blank" rel="noopener">
         <img src="/assets/powerbi/sales-profit.png"
              alt="Power BI Sales & Profit dashboard (KPIs, product mix, YoY, Top-N what-if)">
       </a>
       <figcaption>
-        Static preview. Click the image for full size.
-        Interactive version available on request (private link).
+        Static preview (click to enlarge). The live interactive report is embedded below.
       </figcaption>
     </figure>
 
     <div class="btns">
-      <a class="btn" href="/assets/powerbi/sales-profit.png" target="_blank" rel="noopener">View full image</a>
-      <a class="btn secondary" href="mailto:hello@iocivil.com?subject=Request%20interactive%20Power%20BI%20demo%20(Sales%20%26%20Profit)">
-        Request interactive demo
-      </a>
+      <a class="btn" href="#live-report">Jump to live report</a>
+      <a class="btn secondary" href="/assets/powerbi/sales-profit.png" target="_blank" rel="noopener">View full image</a>
+      <a class="btn secondary" href="mailto:hello@iocivil.com?subject=Request%20Power%20BI%20info%20(Sales%20%26%20Profit)">Contact</a>
     </div>
 
-    <!-- Keep your iframe block for later (collapsed).
-         When Publish-to-web or Org-embed is ready, replace SRC and open the details by default. -->
-    <details>
-      <summary><strong>Show embedded report (when enabled)</strong></summary>
-      <div style="margin-top:10px">
-        <iframe
-          title="Power BI — Sales & Profit"
-          loading="lazy"
-          src="YOUR_PUBLISH_TO_WEB_OR_ORG_EMBED_URL_HERE"
-          allowfullscreen="true">
-        </iframe>
-        <p class="muted" style="margin-top:6px">
-          If this section is blank, embedding isn’t enabled yet. The static image above is always available.
-        </p>
-      </div>
-    </details>
+    <!-- LIVE EMBED -->
+    <h2 id="live-report" style="margin-top:28px">Interactive report</h2>
+    <div class="pbi-wrap">
+      <iframe
+        title="Power BI — Sales &amp; Profit"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://app.powerbi.com/reportEmbed?reportId=a16c3f62-36db-441a-b780-0fd9fd7177ae&groupId=me&autoAuth=true">
+      </iframe>
+    </div>
+    <p class="muted" style="margin-top:8px">
+      If you’re prompted to sign in, this is an <em>organization</em> embed (requires a Power BI sign-in).
+      For a no-sign-in public demo we can switch to a capacity + embed-token setup.
+    </p>
+
   </section>
 
   <section>
